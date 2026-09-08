@@ -29,9 +29,15 @@ python3 -m http.server 8765
    the "Coming to the App Store" badge. On approval, swap the badge for the
    link and put the real numeric Apple ID in. Nothing else on the page changes.
 
-The canonical URL in the `<link rel="canonical">` tags and in `sitemap.xml` is
-`healthimporttool.app`, which is **not registered**. Either register it or
-change those five lines to wherever this ends up being served from.
+## Where it serves
+
+`https://enalmar.github.io/hit-site/`, from `main` at the repository root, the
+same arrangement as `gradial-site` and `trackload-site`.
+
+Note the **subpath**. If you later put this on its own domain, as `baton-site`
+has, three things change: the canonical tags in the three pages, `sitemap.xml`
+and `robots.txt`, and the absolute links in `404.html`. Everything else uses
+relative paths and needs no edit.
 
 ## About the screenshots
 
