@@ -1,0 +1,36 @@
+<!-- Source for assets/og.png, the social sharing card. Not part of the site.
+     Regenerate after a redesign:
+       python3 -m http.server 8765
+       "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+         --screenshot=assets/og.png --window-size=1200,630 \
+         --force-device-scale-factor=1 --virtual-time-budget=3000 \
+         http://localhost:8765/tools/og-source.html -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+body::before{background:radial-gradient(900px 700px at 50% -10%,rgba(255,107,106,.28),rgba(255,107,106,.07) 45%,transparent 72%)}
+.og{position:relative;z-index:1;height:630px;display:grid;grid-template-columns:1.15fr .85fr;
+    align-items:center;gap:40px;padding:0 72px}
+.og h1{font-size:62px;font-weight:700;letter-spacing:-.025em;line-height:1.08;max-width:12ch}
+.og p{margin-top:22px;font-size:24px;color:var(--text-2);max-width:26ch;line-height:1.4}
+.og .mark{display:flex;align-items:center;gap:16px;margin-bottom:30px}
+.og .mark img{width:52px;height:52px;border-radius:13px}
+.og .mark span{font-size:22px;font-weight:700;letter-spacing:.22em}
+.og .shot{border-radius:30px;overflow:hidden;border:1px solid var(--line);
+          box-shadow:0 30px 90px rgba(0,0,0,.6);transform:translateY(46px) rotate(-2.5deg)}
+</style></head><body>
+<div class="og">
+  <div>
+    <div class="mark">
+      <img src="../assets/icon-1024.png" alt="">
+      <span>HIT</span>
+    </div>
+    <h1>Your workouts, in Apple Health. Once.</h1>
+    <p>Strava and Garmin exports in. No duplicates, no account, no server.</p>
+  </div>
+  <div class="shot">
+    <img src="../screenshots/03-plan.png" width="480" alt="">
+  </div>
+</div>
+</body></html>

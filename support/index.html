@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support · Health Import Tool</title>
+<meta name="description" content="Help with importing Strava and Garmin exports into Apple Health: getting your data, what HIT can and cannot do, and what to try when something goes wrong.">
+<link rel="canonical" href="https://healthimporttool.app/support/">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0E0E11">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <div class="bar">
+      <a class="brand" href="../" style="color:inherit">
+        <img src="../assets/icon-1024.png" alt="" width="36" height="36">
+        <span>HIT</span>
+      </a>
+      <nav><a href="../">Home</a><a href="../privacy/">Privacy</a></nav>
+    </div>
+  </div>
+</header>
+
+<section class="prose">
+  <div class="wrap narrow">
+    <p class="eyebrow">Support</p>
+    <h1 style="font-size:clamp(28px,4.4vw,40px);font-weight:700">If something is not working</h1>
+    <p class="lead">Most problems are one of the five below. If yours is not, write and say what
+      happened.</p>
+
+    <h2>The app says it cannot read my file</h2>
+    <p>Check it is still a zip. If your Mac or phone unzipped it automatically, zip the folder
+      back up, or download the archive again and choose <strong>Save to Files</strong> rather
+      than opening it.</p>
+    <p>HIT looks for <code>.fit</code>, <code>.gpx</code> and <code>.tcx</code> files anywhere
+      inside the archive. If there are none, there is nothing it can import.</p>
+
+    <h2>Some activities came in without a route or heart rate</h2>
+    <p>Those are listed at the end of the run under <strong>Summary only</strong>. It means the
+      track file for that activity would not parse, so the activity was imported from its
+      summary row instead. The workout, its date, duration and distance are all there; the
+      per-second detail is not.</p>
+
+    <h2>Health already had a workout and HIT would not replace it</h2>
+    <p>Apple only lets an app delete data it wrote itself, so a workout recorded by your watch
+      or another app cannot be replaced by HIT. It can add the heart rate, cadence and power
+      that are missing, and it will offer to.</p>
+    <p>Energy and distance are deliberately not added, because Health sums those across sources
+      and adding them would inflate your Move ring. If you want the fuller copy, delete the
+      original in the Health app and run HIT again.</p>
+
+    <h2>The import stopped part-way</h2>
+    <p>Open HIT again. It offers to carry on from where it stopped, and picking that up costs
+      one check against Health rather than reading every file a second time. Nothing is written
+      twice.</p>
+    <p>Imports pause when you switch to another app, because iOS suspends the work. Staying in
+      HIT while a long import runs is the only requirement.</p>
+
+    <h2>I paid and the unlock has not appeared</h2>
+    <p>Open the unlock screen and press <strong>Restore purchase</strong>. Purchases are tied to
+      your Apple Account, so make sure you are signed in with the same one you bought with.</p>
+    <p>Refunds are handled by Apple, at
+      <a href="https://reportaproblem.apple.com" rel="noopener">reportaproblem.apple.com</a>.</p>
+
+    <h2>Still stuck</h2>
+    <p>Write to <a href="mailto:PLACEHOLDER_SUPPORT_EMAIL">PLACEHOLDER_SUPPORT_EMAIL</a> and say
+      what you did, what you expected, and what happened instead. If HIT showed a number, it
+      helps to include it.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="row">
+      <span>Health Import Tool</span>
+      <span class="spacer"></span>
+      <a href="../">Home</a>
+      <a href="../privacy/">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
