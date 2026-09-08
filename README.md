@@ -16,7 +16,7 @@ python3 -m http.server 8765
 | `privacy/` | Privacy policy. The App Store requires a reachable URL for this |
 | `support/` | Support page. The App Store requires one of these too |
 | `assets/site.css` | All the styling. The palette and the radial lift are the app's own |
-| `screenshots/` | Real screenshots from a real import, not mockups |
+| `screenshots/` | Real screenshots from a real import, not mockups. 1020px wide, JPEG at quality 90 |
 | `404.html`, `robots.txt`, `sitemap.xml` | Housekeeping |
 | `tools/og-source.html` | Source for the social card. Not served as a page |
 
@@ -41,9 +41,26 @@ relative paths and needs no edit.
 
 ## About the screenshots
 
-Every one is a real run against the real 1,090-activity reference archive, not
-a mockup and not a composite. If the app's interface changes, retake them
-rather than editing them.
+Every one is a real run against the real 1,090-activity reference archive on a
+freshly erased simulator, not a mockup and not a composite. If the app's
+interface changes, retake them rather than editing them.
+
+Captured at native resolution on an iPhone 16 Pro Max, which is 1320px wide,
+then resized **by width** to 1020px and encoded as JPEG at quality 90. 1020px
+is 3x the ~340px the phones are displayed at, so they stay sharp on a Retina
+screen.
+
+Two traps, both of which caught me:
+
+- `sips -Z` fits the **longest** side. On a portrait screenshot that sets the
+  height and leaves the width far too small. Use `sips --resampleWidth`.
+- `sips ... --out <same file>` overwrites in place. Keep the natives somewhere
+  else, or a second pass has nothing good to work from.
+
+PNG at this size is 500 to 830KB each. JPEG at quality 90 is 124 to 255KB with
+no visible artifacts on the dark interface or its small text, which was checked
+by cropping a text region from both and comparing. Everything below the hero is
+`loading="lazy"`, so a first view fetches one image, not five.
 
 ## Claims on this page
 
