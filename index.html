@@ -415,16 +415,29 @@
 
   document.querySelectorAll('.reveal').forEach(function (el) { seen.observe(el); });
 
-  // Dead-man's switch. If nothing at all has been revealed shortly after load,
-  // the observer is not doing its job in this browser and the effect is
-  // abandoned wholesale, which puts every section back to plainly visible. A
-  // page that animates nicely is worth having; a page that stays blank is not,
-  // and this guarantees the second cannot happen.
-  setTimeout(function () {
-    if (document.querySelectorAll('.reveal.in').length === 0) {
+  // Dead-man's switch, so a section can never be left invisible.
+  //
+  // The test is "is anything well inside the viewport still hidden", not "has
+  // anything been revealed yet". The second version abandoned the effect on
+  // every single load, because at the top of the page the hero fills the
+  // screen and nothing has legitimately been revealed. Half a viewport is
+  // comfortably past the observer's own -12% margin, so an element that far up
+  // and still hidden means the observer is not working.
+  var ticks = 0;
+  var audit = setInterval(function () {
+    var stuck = Array.prototype.some.call(
+      document.querySelectorAll('.reveal:not(.in)'),
+      function (el) {
+        var box = el.getBoundingClientRect();
+        return box.bottom > 0 && box.top < window.innerHeight * 0.5;
+      });
+    if (stuck) {
       document.documentElement.classList.remove('js-reveal');
+      clearInterval(audit);
     }
-  }, 1500);
+    // Watch the first stretch of reading, then stop and trust it.
+    if (++ticks > 15) { clearInterval(audit); }
+  }, 900);
 
   // The hero phone drifts against the scroll, a few pixels only. Read in the
   // scroll handler, written in rAF, so it never forces a synchronous layout.
