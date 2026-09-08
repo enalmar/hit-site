@@ -59,3 +59,24 @@ observed in a run. Specifically:
   measured on a real iPhone.
 
 Do not add a number here that has not been measured.
+
+## The scroll animation is unverified
+
+Sections fade and lift as they are scrolled to, via `IntersectionObserver` in
+`index.html`. **Nobody has watched this work.** Every browser available while
+the page was built ran the tab in the background, where Chrome suspends
+`requestAnimationFrame` and dispatches no scroll events, so neither the
+observer nor any scroll-driven alternative could be made to fire. Open the page
+in a normal window and check it before relying on it.
+
+What *is* verified is that the page cannot break because of it:
+
+- The CSS shows every section by default. The script opts into hiding them, and
+  only once it knows it can reveal them again. Rendering with JavaScript
+  disabled produces a byte-identical page to rendering with it enabled.
+- A backstop runs for the first fifteen seconds. If anything more than halfway
+  up the viewport is still hidden, the effect is abandoned and every section
+  goes back to plainly visible.
+
+If the animation turns out not to fire in real browsers, the page still reads
+correctly, which is the property worth protecting.
