@@ -3,7 +3,7 @@
    page and the product look like one thing. */
 :root{
   --ground:#0E0E11; --card:#18181C; --raised:#212127; --line:rgba(255,255,255,.09);
-  --text:#F5F5F7; --text-2:#9C9CA4; --text-3:#6A6A72;
+  --text:#F5F5F7; --text-2:#9C9CA4; --text-3:#8A8A92;
   --signal:#FF6B6A; --warm:#FFA36B; --good:#5FD39C; --warn:#F5B942;
   --gutter:clamp(20px,5vw,32px); --radius:18px;
   --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",system-ui,sans-serif;
@@ -53,6 +53,16 @@ header.site{padding:26px 0 0;position:relative;z-index:2}
 .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--signal)}
 .price-line{margin-top:16px;color:var(--text-3);font-size:14.5px}
 
+/* The one action on the page. Solid, not a gradient: the app's warm lift is
+   already behind it, and the button should read as the thing to press. */
+.cta-store{display:inline-flex;align-items:center;justify-content:center;margin-top:30px;
+  padding:14px 26px;border-radius:999px;background:var(--signal);color:#1A0B0B;
+  font-size:16px;font-weight:650;letter-spacing:-.005em;
+  transition:background-color 150ms ease,transform 150ms ease}
+.cta-store:hover{background:#FF8584;text-decoration:none}
+.cta-store:active{transform:translateY(1px)}
+.cta-store:focus-visible{outline:2px solid var(--text);outline-offset:3px}
+
 /* Phone screenshots, framed the way the device shows them. */
 .phone{border-radius:34px;overflow:hidden;border:1px solid var(--line);
   background:var(--card);box-shadow:0 30px 80px rgba(0,0,0,.55)}
@@ -99,7 +109,7 @@ section > .wrap > p.intro{margin-top:14px;color:var(--text-2);max-width:60ch}
 /* The marker is positioned, not laid out. Making the <li> a flex or grid
    container turns every inline <strong> and <code> inside it into a separate
    flex item, which stacks the sentence into columns. */
-ul.plain{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px}
+ul.plain{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:14px;max-width:68ch}
 ul.plain li{position:relative;padding-left:20px;color:var(--text-2);font-size:15.5px}
 ul.plain li::before{content:"";position:absolute;left:0;top:9px;width:5px;height:5px;
   border-radius:50%;background:var(--text-3)}
@@ -127,6 +137,7 @@ details.faq:last-of-type{border-bottom:1px solid var(--line)}
 details.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-size:16.5px;
   font-weight:550;display:flex;justify-content:space-between;gap:18px;align-items:baseline}
 details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:focus-visible{outline:2px solid var(--signal);outline-offset:4px;border-radius:6px}
 details.faq summary::after{content:"+";color:var(--text-3);font-weight:400;font-size:20px}
 details.faq[open] summary::after{content:"\2013"}
 details.faq p{padding:0 0 20px;color:var(--text-2);font-size:15.5px;max-width:66ch}

@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Health Import Tool: bring your Strava and Garmin workouts into Apple Health</title>
 <meta name="description" content="Health Import Tool reads a zip of exported workouts from Strava, Garmin or anywhere else and writes what is missing into Apple Health, without ever creating a duplicate. No account, no server, nothing leaves your iPhone.">
-<link rel="canonical" href="https://enalmar.github.io/hit-site/">
+<link rel="canonical" href="https://hit.enalmar.uk/">
+<meta name="apple-itunes-app" content="app-id=6809584040">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://hit.enalmar.uk/">
 <meta property="og:title" content="Health Import Tool: your workouts, in Apple Health. Once.">
 <meta property="og:description" content="A zip of exported workouts in. Everything that was missing, in Apple Health. No duplicates, no account, no server.">
-<meta property="og:image" content="assets/og.png">
+<meta property="og:image" content="https://hit.enalmar.uk/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="assets/og.png">
+<meta name="twitter:image" content="https://hit.enalmar.uk/assets/og.png">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0E0E11">
 <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
@@ -25,8 +27,10 @@
   "applicationCategory":"HealthApplication",
   "operatingSystem":"iOS 18.0 or later",
   "description":"Reads a zip of exported workouts from Strava, Garmin or any folder of FIT, GPX and TCX files and writes what is missing into Apple Health, without creating duplicates.",
-  "offers":{"@type":"Offer","price":"4.99","priceCurrency":"GBP",
-            "description":"First 100 workouts free, then a single payment to remove the limit."}
+  "url":"https://hit.enalmar.uk/",
+  "installUrl":"https://apps.apple.com/gb/app/health-import-tool/id6809584040",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"GBP",
+            "description":"Free to download. The first 100 workouts are free; a single £4.99 in-app purchase removes the limit."}
 }
 </script>
 </head>
@@ -57,21 +61,13 @@
         <p class="lede">You have years of runs and rides in Strava, or Garmin, or a folder of
           files from a watch you no longer own. Health has some of them. Working out which is
           the job nobody wants to do by hand.</p>
-        <p class="badge"><span class="dot" aria-hidden="true"></span> Coming to the App Store</p>
-<!-- STAGED: App Store link.
-     On approval: delete the "Coming to the App Store" badge directly above,
-     uncomment the block below, and replace APPSTORE_ID with the numeric Apple
-     ID from App Store Connect. Nothing else on the page changes.
-        <p class="badge">
-          <a href="https://apps.apple.com/gb/app/health-import-tool/idAPPSTORE_ID">Download on the App Store</a>
-        </p>
--->
+        <a class="cta-store" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">Download on the App Store</a>
         <p class="price-line">First 100 workouts free. £4.99 once to remove the limit.
           Not a subscription.</p>
       </div>
       <div class="phone drift fade" aria-hidden="false">
-        <img fetchpriority="high" decoding="async" src="screenshots/03-plan.jpg" width="1020" height="2216"
-             alt="Health Import Tool showing 1,090 activities to write from a Strava export, with a breakdown of new, upgrade, merge and already there.">
+        <img fetchpriority="high" decoding="async" src="screenshots/05-done.jpg" width="1020" height="2216"
+             alt="Health Import Tool after an import: 100 activities added to Health, no duplicates created, 93 routes attached.">
       </div>
     </div>
   </div>
@@ -333,6 +329,8 @@
       <li>One payment, on your Apple Account, for every device you sign in with. It does not
         renew and there is nothing to cancel.</li>
     </ul>
+    <p class="reveal" data-delay="3" style="margin-top:30px">
+      <a class="cta-store" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">Download on the App Store</a></p>
   </div>
 </section>
 
