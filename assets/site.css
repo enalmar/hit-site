@@ -68,7 +68,7 @@ header.site{position:sticky;top:0;z-index:var(--z-header);
    The bezel is the screen's margin, not the frame's padding: a percentage
    margin on the screen is a share of the phone's own width, where padding
    on the frame would be a share of whatever the phone sits in. */
-.device{position:relative;isolation:isolate;padding:0;
+.device{display:flow-root;position:relative;isolation:isolate;padding:0;
   border-radius:15.8% / 7.3%;
   background:linear-gradient(#3A3A40,#26262B);
   box-shadow:
