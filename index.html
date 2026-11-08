@@ -39,78 +39,168 @@
 <header class="site">
   <div class="wrap">
     <div class="bar">
-      <div class="brand">
-        <img src="assets/icon-1024.png" alt="" width="36" height="36">
+      <a class="brand" href="./">
+        <img src="assets/icon-1024.png" alt="" width="32" height="32">
         <span>HIT</span>
-      </div>
+      </a>
       <nav>
         <a href="#how">How it works</a>
         <a href="#export">Get your data</a>
         <a href="#price">Price</a>
         <a href="privacy/">Privacy</a>
       </nav>
+      <a class="store-mini" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">
+        <img src="assets/brands/app-store-badge.svg" alt="Download on the App Store" width="120" height="40"></a>
     </div>
   </div>
 </header>
 
+<!-- ─────────────────────────────  Hero  ───────────────────────────────── -->
 <div class="hero">
   <div class="wrap">
     <div class="hero-grid">
-      <div class="fade">
-        <h1>Your workouts, in Apple Health. Once.</h1>
-        <p class="lede">You have years of runs and rides in Strava, or Garmin, or a folder of
-          files from a watch you no longer own. Health has some of them. Working out which is
-          the job nobody wants to do by hand.</p>
-        <a class="cta-store" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">Download on the App Store</a>
-        <p class="price-line">First 100 workouts free. £4.99 once to remove the limit.
-          Not a subscription.</p>
+      <div class="hero-copy fade">
+        <h1>Your workouts, in Apple&nbsp;Health. Once.</h1>
+        <p class="lede">Years of runs and rides in Strava, Garmin, or a folder of files from a
+          watch you no longer own. HIT brings every one into Apple Health, and never makes a
+          second copy of a workout that is already there.</p>
+        <div class="cta-row">
+          <a class="store" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">
+            <img src="assets/brands/app-store-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
+          <p class="price-line">First 100 workouts free.<br>£4.99 once after that. Not a subscription.</p>
+        </div>
       </div>
-      <div class="phone drift fade" aria-hidden="false">
-        <img fetchpriority="high" decoding="async" src="screenshots/05-done.jpg" width="1020" height="2216"
-             alt="Health Import Tool after an import: 100 activities added to Health, no duplicates created, 93 routes attached.">
+
+      <div class="hero-devices fade" data-delay="1">
+        <figure class="device back">
+          <div class="screen"><img decoding="async" src="screenshots/fitness-workouts.jpg" width="1020" height="2216"
+               alt="The Fitness app listing imported runs, by date and distance."></div>
+        </figure>
+        <figure class="device front">
+          <div class="screen"><img decoding="async" fetchpriority="high" src="screenshots/hit-done.jpg" width="1020" height="2216"
+               alt="Health Import Tool after an import: 1,082 activities added to Health, no duplicates created."></div>
+        </figure>
       </div>
+    </div>
+
+    <div class="sources fade" data-delay="2">
+      <p>Reads exports from</p>
+      <ul class="logo-row" role="list">
+        <li><svg class="logo strava" viewBox="0 0 17.074 24" role="img" aria-label="Strava"><use href="assets/brands/logos.svg#strava"/></svg></li>
+        <li><svg class="logo garmin" viewBox="0 0 24 6.508" role="img" aria-label="Garmin"><use href="assets/brands/logos.svg#garmin"/></svg></li>
+        <li><img class="logo wahoo" src="assets/brands/wahoo.png" alt="Wahoo" width="200" height="49"></li>
+        <li><img class="logo coros" src="assets/brands/coros.png" alt="COROS" width="320" height="81"></li>
+        <li><svg class="logo suunto" viewBox="0 0 1841.422 593.069" role="img" aria-label="Suunto"><use href="assets/brands/logos.svg#suunto"/></svg></li>
+        <li><svg class="logo polar" viewBox="0 0 724.862 119.969" role="img" aria-label="Polar"><use href="assets/brands/logos.svg#polar"/></svg></li>
+        <li><svg class="logo zwift" viewBox="0 0 20.4 18.4" role="img" aria-label="Zwift"><use href="assets/brands/logos.svg#zwift"/></svg></li>
+        <li class="files">and any FIT, GPX or TCX file</li>
+      </ul>
     </div>
   </div>
 </div>
 
-<hr class="rule">
+<!-- ─────────────────────────────  The flow  ─────────────────────────────
+     A real sequence, so it is numbered. The track behind the numbers fills
+     once, left to right, when the row is reached: the page's one moment. -->
+<section id="how" class="flow-section">
+  <div class="wrap wide">
+    <h2 class="reveal">From your old app to Apple Health, in four steps.</h2>
+    <p class="intro reveal" data-delay="1">The slow part is the first one: Strava and Garmin can
+      take a few hours to email your archive.</p>
 
-<!-- ─────────────────────────────  What it does  ───────────────────────── -->
-<section id="how">
-  <div class="wrap">
-    <p class="eyebrow reveal">What it does</p>
-    <h2 class="reveal">Point it at a zip. It works out the rest.</h2>
-    <p class="intro reveal" data-delay="1">Health Import Tool reads every file in the archive,
-      checks each activity against what Apple Health already holds, and writes only what is
-      missing. Run the same export twice and the second run writes nothing.</p>
+    <ol class="flow reveal" role="list">
+      <li class="stage">
+        <div class="visual">
+          <div class="browser" role="img" aria-label="A browser window: request the archive from Strava or Garmin, or collect FIT, GPX and TCX files, and export_556007.zip, 133 MB, downloads.">
+            <div class="browser-bar"><i></i><i></i><i></i><span>Download your data</span></div>
+            <div class="browser-body">
+              <div class="src"><span class="tile strava-tile"><svg viewBox="0 0 17.074 24"><use href="assets/brands/logos.svg#strava"/></svg></span>
+                <span class="src-text"><b>Strava</b>Request your archive</span></div>
+              <div class="src"><span class="tile garmin-tile"><svg viewBox="0 0 24 6.508"><use href="assets/brands/logos.svg#garmin"/></svg></span>
+                <span class="src-text"><b>Garmin</b>Export your data</span></div>
+              <div class="src"><span class="tile file-tile">FIT</span>
+                <span class="src-text"><b>Anything else</b>FIT, GPX or TCX files</span></div>
+              <div class="download">
+                <span class="zip"></span>
+                <span class="dl-name">export_556007.zip<small>133 MB · done</small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stage-text">
+          <span class="n">1</span>
+          <h3>Download your archive</h3>
+          <p>Ask Strava or Garmin for your data in a browser and they email one zip with every
+            activity. From Wahoo, COROS, Suunto, Polar or Zwift, zip up the FIT, GPX or TCX
+            files you export.</p>
+        </div>
+      </li>
 
-    <div class="steps">
-      <div class="step reveal"><p class="n">01</p>
-        <h3>Give it the zip</h3>
-        <p>A Strava bulk export, a Garmin export, or any zip of FIT, GPX and TCX files.
-          Folders or loose, it makes no difference. Do not unzip it.</p></div>
-      <div class="step reveal" data-delay="1"><p class="n">02</p>
-        <h3>See what will happen</h3>
-        <p>Before a single workout is written you get the whole plan: what is new, what
-          Health already has, and what cannot be touched.</p></div>
-      <div class="step reveal" data-delay="2"><p class="n">03</p>
-        <h3>Let it run</h3>
-        <p>Routes and heart rate go in with each workout, not just a summary. If it is
-          interrupted it picks up exactly where it stopped.</p></div>
-    </div>
+      <li class="stage">
+        <div class="visual">
+          <figure class="device sm">
+            <div class="screen"><img loading="lazy" decoding="async" src="screenshots/files-zip.jpg" width="1020" height="2216"
+                 alt="The Files app on iPhone with export_556007.zip saved in the HIT folder."></div>
+          </figure>
+        </div>
+        <div class="stage-text">
+          <span class="n">2</span>
+          <h3>Put the zip on your iPhone</h3>
+          <p>Open the email on your iPhone and save the zip to Files, or AirDrop it from your
+            Mac. Leave it zipped.</p>
+        </div>
+      </li>
+
+      <li class="stage">
+        <div class="visual">
+          <figure class="device sm">
+            <div class="screen"><img loading="lazy" decoding="async" src="screenshots/hit-plan.jpg" width="1020" height="2216"
+                 alt="Health Import Tool's plan for the zip: 1,082 activities to write, none already there."></div>
+          </figure>
+        </div>
+        <div class="stage-text">
+          <span class="n">3</span>
+          <h3>Import it with HIT</h3>
+          <p>Choose the zip. HIT reads every file, checks each one against Apple Health, and
+            shows you the plan before it writes anything.</p>
+        </div>
+      </li>
+
+      <li class="stage">
+        <div class="visual">
+          <figure class="device sm">
+            <div class="screen"><img loading="lazy" decoding="async" src="screenshots/fitness-workout.jpg" width="1020" height="2216"
+                 alt="The Fitness app showing an imported Zwift ride with its heart rate and route."></div>
+          </figure>
+        </div>
+        <div class="stage-text">
+          <span class="n">4</span>
+          <h3>Every workout, in Apple Health</h3>
+          <p>Each one arrives with its route and heart rate, and shows up in Health and Fitness
+            beside the workouts your watch recorded.</p>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
-<!-- ─────────────────────────────  The bands  ──────────────────────────── -->
-<section>
+<!-- ─────────────────────────────  A closer look  ──────────────────────── -->
+<section class="closer">
   <div class="wrap">
+    <h2 class="reveal">What happens inside HIT.</h2>
+
+    <!-- On a wide screen with scripting on, one phone stays put while the
+         words scroll past it, and its screen follows the words. Without the
+         script, or on a phone, each step keeps its own framed capture. -->
+    <div class="story">
+    <div class="story-steps">
 
     <div class="band reveal">
-      <div class="band-shot phone">
-        <img loading="lazy" decoding="async" src="screenshots/01-home.jpg" width="1020" height="2216"
-             alt="The first screen of Health Import Tool, listing a 133 MB Strava export ready to import.">
-      </div>
-      <div>
+      <figure class="device">
+        <div class="screen"><img loading="lazy" decoding="async" src="screenshots/hit-home.jpg" width="1020" height="2216"
+             alt="The first screen of Health Import Tool, listing a 133 MB Strava export ready to import."></div>
+      </figure>
+      <div class="band-text">
         <h3>It takes the archive exactly as it arrives</h3>
         <p>A 133 MB Strava export, a Garmin download, or a folder of files off an old watch.
           Drop it into HIT through Files, or AirDrop it straight to the app. No unzipping, no
@@ -119,11 +209,11 @@
     </div>
 
     <div class="band flip reveal">
-      <div class="band-shot phone">
-        <img loading="lazy" decoding="async" src="screenshots/02-scanning.jpg" width="1020" height="2216"
-             alt="Health Import Tool reading a Strava export, 213 of 1,180 activities read.">
-      </div>
-      <div>
+      <figure class="device">
+        <div class="screen"><img loading="lazy" decoding="async" src="screenshots/hit-scan.jpg" width="1020" height="2216"
+             alt="Health Import Tool reading a Strava export, file by file."></div>
+      </figure>
+      <div class="band-text">
         <h3>Every file is read before anything is written</h3>
         <p>HIT parses each track file, works out what the activity actually was, and checks it
           against Health. Only then does it show you the plan. Files it cannot read are
@@ -132,11 +222,11 @@
     </div>
 
     <div class="band reveal">
-      <div class="band-shot phone">
-        <img loading="lazy" decoding="async" src="screenshots/03-plan.jpg" width="1020" height="2216"
-             alt="The plan screen: 1,090 activities to write, 0 upgrade, 0 merge, 0 already there.">
-      </div>
-      <div>
+      <figure class="device">
+        <div class="screen"><img loading="lazy" decoding="async" src="screenshots/hit-plan.jpg" width="1020" height="2216"
+             alt="The plan screen: 1,082 activities to write, 0 upgrade, 0 merge, 0 already there."></div>
+      </figure>
+      <div class="band-text">
         <h3>Nothing is written until you have seen the plan</h3>
         <p>The screen tells you how many are new, how many are already there, and how many
           Health has from another app and can only be added to. Then you decide.</p>
@@ -144,11 +234,11 @@
     </div>
 
     <div class="band flip reveal">
-      <div class="band-shot phone">
-        <img loading="lazy" decoding="async" src="screenshots/04-importing.jpg" width="1020" height="2216"
-             alt="An import in progress: 14 of 100 written to Health, about 50 seconds left.">
-      </div>
-      <div>
+      <figure class="device">
+        <div class="screen"><img loading="lazy" decoding="async" src="screenshots/hit-import.jpg" width="1020" height="2216"
+             alt="An import in progress, with the number written so far and the time left."></div>
+      </figure>
+      <div class="band-text">
         <h3>It tells you how long it will take</h3>
         <p>A real estimate from the pace of the run in front of you, not a guess made at the
           start. And it says the true constraint out loud: stay in the app while it runs,
@@ -157,195 +247,195 @@
     </div>
 
     <div class="band reveal">
-      <div class="band-shot phone">
-        <img loading="lazy" decoding="async" src="screenshots/05-done.jpg" width="1020" height="2216"
-             alt="The summary after an import: workouts added to Health, with routes attached and none refused.">
-      </div>
-      <div>
+      <figure class="device">
+        <div class="screen"><img loading="lazy" decoding="async" src="screenshots/hit-done.jpg" width="1020" height="2216"
+             alt="The summary after an import: workouts added to Health, with routes attached and none refused."></div>
+      </figure>
+      <div class="band-text">
         <h3>And it tells you what it could not do</h3>
         <p>Routes attached, routes Health refused, files that would not read, activities that
           turned out to be planned routes rather than recorded ones. Every number is the real
           one.</p>
       </div>
     </div>
-
+    </div>
+    <div class="story-stage" aria-hidden="true">
+      <figure class="device">
+        <div class="screen"><img alt="" width="1020" height="2216"><img alt="" width="1020" height="2216"></div>
+      </figure>
+    </div>
+    </div>
   </div>
 </section>
 
-<hr class="rule">
-
 <!-- ─────────────────────────────  Duplicates  ─────────────────────────── -->
-<section>
+<section class="dupes">
   <div class="wrap">
-    <p class="eyebrow reveal">The whole point</p>
-    <h2 class="reveal">It will not give you two of everything.</h2>
-    <p class="intro reveal" data-delay="1">This is the part that makes importing years of
-      history bearable. Every activity carries an identity stamp, so HIT can always tell its
-      own work from everyone else's, and tell a re-import from a new one.</p>
-
-    <div class="features">
-      <div class="feature reveal">
-        <h3>Already in Health, from anywhere</h3>
-        <p>Matched and left alone. A workout your watch recorded stays exactly as it is.</p>
+    <div class="split">
+      <div class="split-lead">
+        <h2 class="reveal">It will not give you two of everything.</h2>
+        <p class="intro reveal" data-delay="1">This is the part that makes importing years of
+          history bearable. Every activity carries an identity stamp, so HIT can always tell its
+          own work from everyone else's, and tell a re-import from a new one.</p>
+        <p class="claim reveal" data-delay="2">Run the same export twice and the second run
+          writes nothing.</p>
       </div>
-      <div class="feature reveal" data-delay="1">
-        <h3>Already imported, and the file is richer</h3>
-        <p>Replaced with the fuller version. The replacement is saved before the old one is
-          removed, so an interruption can never lose the workout.</p>
-      </div>
-      <div class="feature reveal" data-delay="2">
-        <h3>In Health from another app</h3>
-        <p>HIT adds the heart rate, cadence and power that are missing, one workout at a time,
-          with your say-so on each.</p>
-      </div>
-      <div class="feature reveal" data-delay="3">
-        <h3>Never a second copy</h3>
-        <p>Run the same export again and nothing already in Health is written twice. HIT has
-          to be allowed to read your workouts for this: it can only skip what it can see.</p>
-      </div>
+      <dl class="cases reveal" data-delay="1">
+        <div>
+          <dt>Already in Health, from anywhere</dt>
+          <dd>Matched and left alone. A workout your watch recorded stays exactly as it is.</dd>
+        </div>
+        <div>
+          <dt>Already imported, and the file is richer</dt>
+          <dd>Replaced with the fuller version. The replacement is saved before the old one is
+            removed, so an interruption can never lose the workout.</dd>
+        </div>
+        <div>
+          <dt>In Health from another app</dt>
+          <dd>HIT adds the heart rate, cadence and power that are missing, one workout at a
+            time, with your say-so on each.</dd>
+        </div>
+        <div>
+          <dt>Never a second copy</dt>
+          <dd>Nothing already in Health is written twice. HIT has to be allowed to read your
+            workouts for this: it can only skip what it can see.</dd>
+        </div>
+      </dl>
     </div>
   </div>
 </section>
 
 <!-- ─────────────────────────────  Honest limits  ──────────────────────── -->
-<section>
+<section class="limits-section">
   <div class="wrap">
-    <p class="eyebrow reveal">What it will not do</p>
-    <h2 class="reveal">Apple's rules, not our choices.</h2>
-    <p class="intro reveal" data-delay="1">Worth knowing before you buy, because they cannot be
-      worked around by us or by anyone else.</p>
-    <ul class="plain reveal" data-delay="2">
-      <li><strong>It cannot replace a workout another app wrote.</strong>&nbsp;Apple only lets
-        an app delete data it saved itself, so a workout from your watch or the Strava app is
-        permanently read-only to HIT. It can be added to, never swapped out.</li>
-      <li><strong>It will not touch your Move ring.</strong>&nbsp;Health adds up energy and
-        distance from every source. Writing your export's numbers onto a workout another app
-        owns would count them twice, so HIT refuses. Heart rate, cadence and power are not
-        summed, so those are safe to add.</li>
-      <li><strong>It does not import anything that is not a workout.</strong>&nbsp;A Strava
-        export carries saved routes as well as activities. They have coordinates but no
-        timestamps, so they are recognised and left out.</li>
+    <h2 class="reveal">What it will not do, and why.</h2>
+    <p class="intro reveal" data-delay="1">These are Apple's rules, not our choices. Worth
+      knowing before you buy, because nobody can work around them.</p>
+    <ul class="limits reveal" data-delay="2" role="list">
+      <li><h3>Replace a workout another app wrote</h3>
+        <p>Apple only lets an app delete data it saved itself, so a workout from your watch or
+          the Strava app is permanently read-only to HIT. It can be added to, never swapped
+          out.</p></li>
+      <li><h3>Touch your Move ring</h3>
+        <p>Health adds up energy and distance from every source. Writing your export's numbers
+          onto a workout another app owns would count them twice, so HIT refuses. Heart rate,
+          cadence and power are not summed, so those are safe to add.</p></li>
+      <li><h3>Import things that are not workouts</h3>
+        <p>A Strava export carries saved routes as well as activities. They have coordinates
+          but no timestamps, so they are recognised and left out.</p></li>
     </ul>
   </div>
 </section>
-
-<hr class="rule">
 
 <!-- ─────────────────────────────  Export guides  ──────────────────────── -->
 <section id="export">
   <div class="wrap">
-    <p class="eyebrow reveal">Get your data</p>
     <h2 class="reveal">First you need the zip.</h2>
     <p class="intro reveal" data-delay="1">This is the part that stops most people, and none of
-      it happens inside HIT. Both exports are free, both arrive by email, and both can take a
-      few hours.</p>
+      it happens inside HIT. Both big exports are free, both arrive by email, and both can take
+      a few hours.</p>
 
-    <div class="guide reveal">
-      <h3>Exporting from Strava</h3>
-      <ol>
-        <li>Open <strong>strava.com</strong> in a browser and sign in. This cannot be done in
-          the phone app.</li>
-        <li>Go to <strong>Settings &rsaquo; My Account &rsaquo; Download or Delete Your
-          Account</strong>.</li>
-        <li>Under <strong>Download Request</strong>, press <strong>Request Your
-          Archive</strong>. You are only asking for the download; nothing is deleted.</li>
-        <li>Strava emails you a zip, usually within a few hours. A long history takes
-          longer.</li>
-        <li>Open the email on your iPhone, tap the link, and choose <strong>Save to
-          Files</strong>. Leave it zipped.</li>
-      </ol>
-      <p class="note">The archive holds an <code>activities.csv</code> alongside a folder of
-        FIT, GPX and TCX files. HIT reads the whole thing as it comes.</p>
-      <a class="cta" href="https://support.strava.com/en-us/articles/15401919-exporting-your-data-and-bulk-export"
-         rel="noopener">Strava's own instructions &rsaquo;</a>
-    </div>
+    <div class="guides">
+      <article class="guide reveal">
+        <h3><span class="tile strava-tile"><svg viewBox="0 0 17.074 24" aria-hidden="true"><use href="assets/brands/logos.svg#strava"/></svg></span>
+          Exporting from Strava</h3>
+        <ol>
+          <li>Open <strong>strava.com</strong> in a browser and sign in. This cannot be done in
+            the phone app.</li>
+          <li>Go to <strong>Settings &rsaquo; My Account &rsaquo; Download or Delete Your
+            Account</strong>.</li>
+          <li>Under <strong>Download Request</strong>, press <strong>Request Your
+            Archive</strong>. You are only asking for the download; nothing is deleted.</li>
+          <li>Strava emails you a zip, usually within a few hours. A long history takes
+            longer.</li>
+          <li>Open the email on your iPhone, tap the link, and choose <strong>Save to
+            Files</strong>. Leave it zipped.</li>
+        </ol>
+        <p class="note">The archive holds an <code>activities.csv</code> alongside a folder of
+          FIT, GPX and TCX files. HIT reads the whole thing as it comes.</p>
+        <a class="cta" href="https://support.strava.com/en-us/articles/15401919-exporting-your-data-and-bulk-export"
+           rel="noopener">Strava's own instructions &rsaquo;</a>
+      </article>
 
-    <div class="guide reveal" data-delay="1">
-      <h3>Exporting from Garmin</h3>
-      <ol>
-        <li>Open <strong>garmin.com</strong> in a browser and sign in.</li>
-        <li>Go to <strong>Account Management &rsaquo; Export Your Data</strong>.</li>
-        <li>Request your data. Garmin emails a link when it is ready.</li>
-        <li>Download it, then save the zip to <strong>Files</strong> on your iPhone.</li>
-        <li>Hand HIT the whole zip. It contains several folders, and HIT finds the workout
-          files inside without being told where they are.</li>
-      </ol>
-      <p class="note">Garmin's export is arranged differently from Strava's, with a manifest
-        describing the files. HIT reads either shape, and a plain folder of files with no
-        manifest at all.</p>
-      <a class="cta" href="https://www.garmin.com/en-US/account/datamanagement/exportdata/"
-         rel="noopener">Garmin's export page &rsaquo;</a>
-    </div>
+      <article class="guide reveal" data-delay="1">
+        <h3><span class="tile garmin-tile"><svg viewBox="0 0 24 6.508" aria-hidden="true"><use href="assets/brands/logos.svg#garmin"/></svg></span>
+          Exporting from Garmin</h3>
+        <ol>
+          <li>Open <strong>garmin.com</strong> in a browser and sign in.</li>
+          <li>Go to <strong>Account Management &rsaquo; Export Your Data</strong>.</li>
+          <li>Request your data. Garmin emails a link when it is ready.</li>
+          <li>Download it, then save the zip to <strong>Files</strong> on your iPhone.</li>
+          <li>Hand HIT the whole zip. It contains several folders, and HIT finds the workout
+            files inside without being told where they are.</li>
+        </ol>
+        <p class="note">Garmin's export is arranged differently from Strava's, with a manifest
+          describing the files. HIT reads either shape, and a plain folder of files with no
+          manifest at all.</p>
+        <a class="cta" href="https://www.garmin.com/en-US/account/datamanagement/exportdata/"
+           rel="noopener">Garmin's export page &rsaquo;</a>
+      </article>
 
-    <div class="guide reveal" data-delay="2">
-      <h3>Anywhere else</h3>
-      <ol>
-        <li>Collect any <code>.fit</code>, <code>.gpx</code> or <code>.tcx</code> files you
-          have.</li>
-        <li>Put them in a zip. In folders or loose, it makes no difference.</li>
-        <li>Save it to Files and hand it to HIT.</li>
-      </ol>
-      <p class="note">Where there is no spreadsheet describing the files, the sport, distance
-        and times are read from the files themselves.</p>
+      <article class="guide reveal" data-delay="2">
+        <h3><span class="tile file-tile">FIT</span> Anywhere else</h3>
+        <ol>
+          <li>Export the <code>.fit</code>, <code>.gpx</code> or <code>.tcx</code> files from
+            your app or watch. Wahoo, COROS, Suunto, Polar and Zwift all write at least one of
+            these.</li>
+          <li>Put them in a zip. In folders or loose, it makes no difference.</li>
+          <li>Save it to Files and hand it to HIT.</li>
+        </ol>
+        <p class="note">Where there is no spreadsheet describing the files, the sport, distance
+          and times are read from the files themselves.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<hr class="rule">
-
-<!-- ─────────────────────────────  Privacy  ────────────────────────────── -->
-<section>
+<!-- ─────────────────────────────  Privacy + price  ────────────────────── -->
+<section class="pair">
   <div class="wrap">
-    <p class="eyebrow reveal">Privacy</p>
-    <h2 class="reveal">Nothing leaves your iPhone.</h2>
-    <p class="intro reveal" data-delay="1">There is no account to make and no server to send
-      anything to. HIT reads your file, talks to Apple Health, and that is the whole of it.
-      The only thing it ever asks the network is Apple's App Store, about the one-off
-      unlock.</p>
-    <div class="facts">
-      <div class="fact reveal"><strong>0</strong><span>Accounts to create</span></div>
-      <div class="fact reveal" data-delay="1"><strong>0</strong><span>Analytics or trackers</span></div>
-      <div class="fact reveal" data-delay="2"><strong>0</strong><span>Bytes of your data sent anywhere</span></div>
+    <div class="pair-grid">
+      <div class="panel reveal">
+        <h2>Nothing leaves your iPhone.</h2>
+        <p class="intro">There is no account to make and no server to send anything to. HIT
+          reads your file, talks to Apple Health, and that is the whole of it. The only thing it
+          ever asks the network is Apple's App Store, about the one-off unlock.</p>
+        <dl class="facts">
+          <div><dt>0</dt><dd>accounts to create</dd></div>
+          <div><dt>0</dt><dd>analytics or trackers</dd></div>
+          <div><dt>0</dt><dd>bytes of your data sent anywhere</dd></div>
+        </dl>
+        <p class="more"><a href="privacy/">Read the privacy policy &rsaquo;</a></p>
+      </div>
+
+      <div class="panel price reveal" data-delay="1" id="price">
+        <h2>£4.99, once.</h2>
+        <p class="intro">The first <strong>100 workouts written</strong> are free: enough to
+          import a season, or to try a full export and watch it work before deciding. After that
+          a single payment removes the limit for good.</p>
+        <ul class="plain" role="list">
+          <li>You are only charged for workouts that end up in Health. Duplicates it skips,
+            workouts it merges into, and anything that fails all cost nothing.</li>
+          <li>If a run reaches the limit it stops cleanly and remembers where it got to. Buying
+            the unlock carries straight on from there.</li>
+          <li>One payment, on your Apple Account, for every device you sign in with. It does
+            not renew and there is nothing to cancel.</li>
+        </ul>
+        <a class="store" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">
+          <img src="assets/brands/app-store-badge.svg" alt="Download on the App Store" width="150" height="50"></a>
+      </div>
     </div>
-    <p class="intro reveal" data-delay="3" style="margin-top:26px">
-      <a href="privacy/">Read the privacy policy &rsaquo;</a></p>
   </div>
 </section>
-
-<!-- ─────────────────────────────  Price  ──────────────────────────────── -->
-<section id="price">
-  <div class="wrap">
-    <p class="eyebrow reveal">Price</p>
-    <h2 class="reveal">£4.99, once.</h2>
-    <p class="intro reveal" data-delay="1">The first <strong>100 workouts written</strong> are
-      free, which is enough to import a season, or to try a full export and watch it work
-      before deciding. After that a single payment removes the limit for good.</p>
-    <ul class="plain reveal" data-delay="2">
-      <li>You are only charged for workouts that actually end up in Health. Duplicates it
-        skips, workouts it merges into, and anything that fails all cost nothing.</li>
-      <li>The counter is on the first screen from your very first run, and the import button
-        tells you how many of a run fit inside the allowance before you start it.</li>
-      <li>If a run reaches the limit it stops cleanly and remembers where it got to. Buying
-        the unlock carries straight on from there.</li>
-      <li>One payment, on your Apple Account, for every device you sign in with. It does not
-        renew and there is nothing to cancel.</li>
-    </ul>
-    <p class="reveal" data-delay="3" style="margin-top:30px">
-      <a class="cta-store" href="https://apps.apple.com/gb/app/health-import-tool/id6809584040">Download on the App Store</a></p>
-  </div>
-</section>
-
-<hr class="rule">
 
 <!-- ─────────────────────────────  FAQ  ────────────────────────────────── -->
 <section>
   <div class="wrap narrow">
-    <p class="eyebrow reveal">Questions</p>
-    <h2 class="reveal" style="margin-bottom:20px">Before you start</h2>
+    <h2 class="reveal faq-title">Before you start</h2>
 
     <details class="faq reveal"><summary>How many workouts can it handle?</summary>
-      <p>The reference archive it is developed against holds 1,090 activities and 133 MB of
-        files, and it is imported end to end as part of testing. There is no fixed ceiling.</p></details>
+      <p>The reference archive it is developed against holds 1,180 files and 133 MB, and it is
+        imported end to end as part of testing. There is no fixed ceiling.</p></details>
 
     <details class="faq reveal"><summary>What happens if I run the same export twice?</summary>
       <p>Nothing. The second run reads the archive, finds every activity already in Health,
@@ -385,9 +475,9 @@
       <a href="support/">Support</a>
       <a href="#export">Get your data</a>
     </div>
-    <p style="margin-top:18px">Apple, Apple Health, Apple Watch and App Store are trademarks of
-      Apple Inc. Strava and Garmin are trademarks of their respective owners. This app is not
-      affiliated with any of them.</p>
+    <p class="legal">Apple, Apple Health, Apple Watch and App Store are trademarks of Apple Inc.
+      Strava, Garmin, Wahoo, COROS, Suunto, Polar and Zwift are trademarks of their respective
+      owners. This app is not affiliated with or endorsed by any of them.</p>
   </div>
 </footer>
 
@@ -400,8 +490,7 @@
   if (calm.matches || !('IntersectionObserver' in window)) return;
 
   // Opt into hiding only now that we know the observer exists and will run.
-  // See the note in site.css: the page must read correctly with this script
-  // never executing at all.
+  // The page must read correctly with this script never executing at all.
   document.documentElement.classList.add('js-reveal');
 
   var seen = new IntersectionObserver(function (entries) {
@@ -414,14 +503,8 @@
 
   document.querySelectorAll('.reveal').forEach(function (el) { seen.observe(el); });
 
-  // Dead-man's switch, so a section can never be left invisible.
-  //
-  // The test is "is anything well inside the viewport still hidden", not "has
-  // anything been revealed yet". The second version abandoned the effect on
-  // every single load, because at the top of the page the hero fills the
-  // screen and nothing has legitimately been revealed. Half a viewport is
-  // comfortably past the observer's own -12% margin, so an element that far up
-  // and still hidden means the observer is not working.
+  // Dead-man's switch, so a section can never be left invisible: if anything
+  // well inside the viewport is still hidden, the observer is not working.
   var ticks = 0;
   var audit = setInterval(function () {
     var stuck = Array.prototype.some.call(
@@ -434,24 +517,62 @@
       document.documentElement.classList.remove('js-reveal');
       clearInterval(audit);
     }
-    // Watch the first stretch of reading, then stop and trust it.
     if (++ticks > 15) { clearInterval(audit); }
   }, 900);
+})();
 
-  // The hero phone drifts against the scroll, a few pixels only. Read in the
-  // scroll handler, written in rAF, so it never forces a synchronous layout.
-  var phone = document.querySelector('.drift');
-  if (!phone) return;
-  var offset = 0, queued = false;
-  function paint() {
-    queued = false;
-    phone.style.transform = 'translate3d(0,' + (offset * -0.045).toFixed(2) + 'px,0)';
+// The pinned phone in "What happens inside HIT". Each step already carries its
+// own capture; this only borrows the active one's src, so nothing is lost if
+// it never runs. The step nearest the middle of the screen is the active one.
+// A new capture fades in on top of the old, which stays fully opaque beneath
+// it until the fade is over, so a swap never dips to black.
+(function () {
+  var story = document.querySelector('.story');
+  var wide = window.matchMedia('(min-width: 900px)');
+  if (!story) return;
+  var layers = story.querySelectorAll('.story-stage img');
+  var steps = Array.prototype.slice.call(story.querySelectorAll('.story-steps .band'));
+  var front = 0, current = null, queued = false, settle;
+
+  function show(step) {
+    if (step === current) return;
+    current = step;
+    steps.forEach(function (s) { s.classList.toggle('active', s === step); });
+    var idx = 1 - front, next = layers[idx], prev = layers[front];
+    // Only the latest request may swap, and only once: a cached image can
+    // report complete and still fire its load event afterwards.
+    function reveal() {
+      next.onload = null;
+      if (current !== step) return;
+      clearTimeout(settle);
+      prev.classList.remove('top'); next.classList.add('top', 'on'); front = idx;
+      settle = setTimeout(function () { prev.classList.remove('on'); }, 260);
+    }
+    next.classList.remove('on', 'top');
+    next.onload = reveal;
+    next.src = step.querySelector('.screen img').getAttribute('src');
+    if (next.complete && next.naturalWidth) reveal();
   }
-  window.addEventListener('scroll', function () {
-    offset = window.scrollY;
-    if (offset > 900) return;          // past the hero there is nothing to move
-    if (!queued) { queued = true; requestAnimationFrame(paint); }
-  }, { passive: true });
+
+  function pick() {
+    queued = false;
+    var mid = window.innerHeight / 2, best = steps[0], gap = Infinity;
+    steps.forEach(function (s) {
+      var r = s.getBoundingClientRect(), d = Math.abs(r.top + r.height / 2 - mid);
+      if (d < gap) { gap = d; best = s; }
+    });
+    show(best);
+  }
+  function onScroll() { if (!queued) { queued = true; requestAnimationFrame(pick); } }
+
+  function mode() {
+    var on = wide.matches;
+    story.classList.toggle('story-on', on);
+    window[on ? 'addEventListener' : 'removeEventListener']('scroll', onScroll, { passive: true });
+    if (on) pick();
+  }
+  wide.addEventListener('change', mode);
+  mode();
 })();
 </script>
 

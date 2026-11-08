@@ -16,7 +16,8 @@ python3 -m http.server 8765
 | `privacy/` | Privacy policy. The App Store requires a reachable URL for this |
 | `support/` | Support page. The App Store requires one of these too |
 | `assets/site.css` | All the styling. The palette and the radial lift are the app's own |
-| `screenshots/` | Real screenshots from a real import, not mockups. 1020px wide, JPEG at quality 90 |
+| `assets/brands/` | Strava, Garmin, Wahoo, COROS, Suunto, Polar and Zwift logos, and Apple's official App Store badge |
+| `screenshots/` | Real screenshots from a real import, not composites. 1020px wide, JPEG. The phone frame round each is drawn in CSS |
 | `404.html`, `robots.txt`, `sitemap.xml` | Housekeeping |
 | `tools/og-source.html` | Source for the social card. Not served as a page |
 
@@ -41,14 +42,32 @@ relative paths and needs no edit.
 
 ## About the screenshots
 
-Every one is a real run against the real 1,090-activity reference archive on a
-freshly erased simulator, not a mockup and not a composite. If the app's
-interface changes, retake them rather than editing them.
+Every one is a real run of HIT 1.0.2 against the reference archive (1,180
+files, 133 MB, 1,082 activities once 8 duplicate files are set aside), on an
+iPhone 16 Pro Max simulator in dark mode with the status bar set to 9:41. The
+Files and Fitness captures are Apple's own apps showing that same import; the
+workout opened in Fitness is an indoor Zwift ride, so no real location is
+shown. None is a composite. If the app's interface changes, retake them
+rather than editing them.
 
-Captured at native resolution on an iPhone 16 Pro Max, which is 1320px wide,
-then resized **by width** to 1020px and encoded as JPEG at quality 90. 1020px
-is 3x the ~340px the phones are displayed at, so they stay sharp on a Retina
-screen.
+**Never put a bare screenshot on the page.** Every capture goes inside the CSS
+phone frame:
+
+```html
+<figure class="device">
+  <div class="screen"><img src="screenshots/….jpg" width="1020" height="2216" alt="…"></div>
+</figure>
+```
+
+The frame draws the titanium edge, the bezel, the Dynamic Island and the side
+buttons, all as a share of the phone's width, so it holds at any size. The
+island is always drawn because simulator captures only sometimes include it.
+Add `sm` for the smaller phones in the four-step flow.
+
+Captured at native resolution (1320px wide), then resized **by width** to
+1020px and encoded as JPEG at quality 86. 1020px is 3x the largest size a
+phone is displayed at, so they stay sharp on a Retina screen. The originals
+live outside the repository; `_captures/` is ignored for that reason.
 
 Two traps, both of which caught me:
 
@@ -57,18 +76,17 @@ Two traps, both of which caught me:
 - `sips ... --out <same file>` overwrites in place. Keep the natives somewhere
   else, or a second pass has nothing good to work from.
 
-PNG at this size is 500 to 830KB each. JPEG at quality 90 is 124 to 255KB with
-no visible artifacts on the dark interface or its small text, which was checked
-by cropping a text region from both and comparing. Everything below the hero is
-`loading="lazy"`, so a first view fetches one image, not five.
+PNG at this size is 500 to 830KB each; JPEG is 60 to 130KB with no visible
+artifacts on the dark interface or its small text. Everything below the hero is
+`loading="lazy"`, so a first view fetches the two hero phones and nothing else.
 
 ## Claims on this page
 
 Everything stated here is either verifiable in the app's repository or was
 observed in a run. Specifically:
 
-- **1,090 activities, 133 MB** is the reference archive, and the screenshots
-  show it being read.
+- **1,082 activities, 1,180 files, 133 MB** is the reference archive, and the
+  screenshots show it being read and written.
 - **£4.99** is the UK price derived by Apple from the base US price of $4.99,
   checked in App Store Connect on 8 September 2026.
 - **100 free** is `FreeAllowance.limit` in the app.
