@@ -259,7 +259,10 @@ p.intro{margin-top:18px;color:var(--text-2);max-width:58ch;font-size:clamp(16px,
 .carry .yes{color:var(--good);font-size:13px}
 .carry .no{color:var(--text-3)}
 .carry .part{color:var(--text-2);font-size:13px}
-.behind{margin-top:40px;max-width:68ch}
+.behind-row{margin-top:48px;display:grid;gap:32px;align-items:center;grid-template-columns:1fr}
+.behind-row .device{width:min(100%,260px);margin:0 auto}
+@media(min-width:860px){.behind-row{grid-template-columns:260px 1fr;gap:56px}.behind-row .device{margin:0}}
+.behind{max-width:68ch}
 .behind h3{font-size:17px;font-weight:650}
 .behind ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px}
 .behind li{color:var(--text-2);font-size:15px;padding-left:18px;position:relative}
