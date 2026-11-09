@@ -132,6 +132,8 @@ img.logo{opacity:.8}
 .logo.suunto{height:20px}
 .logo.polar{height:17px}
 .logo.zwift{height:22px}
+.logo-row li.google{gap:8px;font-family:var(--display);font-size:15px;font-weight:600;letter-spacing:-.01em;color:#C9C9CF}
+.logo.googlefit{height:20px;width:24px}
 .logo-row .files{color:var(--text-3);font-size:14px}
 
 /* ───────────────────────────── Sections ─────────────────────────── */
@@ -207,6 +209,8 @@ p.intro{margin-top:18px;color:var(--text-2);max-width:58ch;font-size:clamp(16px,
 .strava-tile svg{height:20px;width:auto}
 .garmin-tile{background:#000;width:auto;padding:0 9px}
 .garmin-tile svg{width:46px;height:auto}
+.google-tile{background:#fff}
+.google-tile svg{width:20px;height:17px;fill:#3C4043}
 /* In the browser rows every tile gets the same slot, so the names line up. */
 .src .tile{width:60px;padding:0}
 .file-tile{background:#E3E3E7;color:#1C1C1F;font-size:10px;font-weight:800;letter-spacing:.02em}
@@ -238,6 +242,31 @@ p.intro{margin-top:18px;color:var(--text-2);max-width:58ch;font-size:clamp(16px,
 .cases dd{margin:8px 0 0;color:var(--text-2);font-size:15.5px;max-width:52ch}
 
 /* ───────────────────────────── Limits ───────────────────────────── */
+/* What comes across: one table, three exports. The dots are the only colour. */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.carry{margin-top:40px;overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.carry table{width:100%;border-collapse:collapse;min-width:520px;font-size:15px}
+.carry th,.carry td{padding:13px 16px;text-align:center;border-bottom:1px solid var(--line)}
+.carry tbody tr:last-child th,.carry tbody tr:last-child td{border-bottom:0}
+.carry tbody th{text-align:left;font-weight:500;color:var(--text);width:44%}
+.carry tbody th small{display:block;margin-top:3px;color:var(--text-3);font-size:13px;font-weight:400}
+.carry thead th{vertical-align:bottom;padding-top:22px;font-weight:600;font-size:15px}
+.carry thead small{display:block;margin-top:4px;color:var(--text-3);font-size:12px;font-weight:400}
+.col-logo.garmin{width:84px;height:23px;fill:currentColor;display:block;margin:0 auto 4px}
+.col-mark{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-size:17px;letter-spacing:-.01em}
+.col-mark svg{width:20px;height:17px;fill:currentColor}
+.col-mark.het{font-weight:750;letter-spacing:.02em}
+.carry .yes{color:var(--good);font-size:13px}
+.carry .no{color:var(--text-3)}
+.carry .part{color:var(--text-2);font-size:13px}
+.behind{margin-top:40px;max-width:68ch}
+.behind h3{font-size:17px;font-weight:650}
+.behind ul{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:12px}
+.behind li{color:var(--text-2);font-size:15px;padding-left:18px;position:relative}
+.behind li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;border-radius:2px;background:var(--text-3)}
+.behind li b{color:var(--text);font-weight:600}
+.behind p{margin-top:16px;color:var(--text-3);font-size:14px}
+
 .limits-section{background:rgba(255,255,255,.015);border-block:1px solid var(--line)}
 .limits{list-style:none;padding:0;margin:40px 0 0;display:grid;gap:16px;grid-template-columns:1fr}
 @media(min-width:860px){.limits{grid-template-columns:repeat(3,1fr)}}
@@ -250,7 +279,7 @@ p.intro{margin-top:18px;color:var(--text-2);max-width:58ch;font-size:clamp(16px,
 
 /* ───────────────────────────── Export guides ────────────────────── */
 .guides{display:grid;gap:16px;margin-top:40px;grid-template-columns:1fr}
-@media(min-width:980px){.guides{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:760px){.guides{grid-template-columns:repeat(2,1fr)}}
 .guide{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:clamp(24px,3vw,30px);display:flex;flex-direction:column}
 .guide h3{font-size:19px;font-weight:650;display:flex;align-items:center;gap:12px}
