@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacy policy · Health Import Tool</title>
-<meta name="description" content="Health Import Tool has no account, no server and no analytics. Nothing about your workouts leaves your iPhone.">
+<meta name="description" content="Health Import Tool has no account, no server and no analytics. Nothing about your workouts or health data leaves your iPhone.">
 <link rel="canonical" href="https://hit.enalmar.uk/privacy/">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#0E0E11">
@@ -32,13 +32,17 @@
     <h1 style="font-size:clamp(28px,4.4vw,40px);font-weight:700">Nothing leaves your iPhone.</h1>
     <p class="lead">Health Import Tool has no account, no server and no analytics. There is
       nowhere for your data to go, and it does not go anywhere.</p>
-    <p style="color:var(--text-3);font-size:14px;margin-top:22px">Last updated 8 September 2026.</p>
+    <p style="color:var(--text-3);font-size:14px;margin-top:22px">Last updated 10 November 2026.</p>
 
     <h2>What the app reads</h2>
     <p><strong>Your Apple Health workouts.</strong> With your permission, HIT reads the workouts
       already in Health. This is what lets it promise never to create a duplicate: it has to
       know what you have before it can tell what is missing. It reads workout dates, durations,
       distances, energy, and whether a route or heart-rate series is attached.</p>
+    <p><strong>Your Apple Health data of the kinds in your export.</strong> When an export holds
+      health data — heart rate, sleep, steps, weight and so on — HIT asks to read those kinds,
+      for the same reason: to see what Health already has, so nothing is written twice. It
+      reads only the times and values it needs to compare.</p>
     <p><strong>The file you give it.</strong> HIT reads the zip you choose. It takes a copy into
       its own storage so a long import can be resumed if it is interrupted, and deletes that
       copy when the import finishes.</p>
@@ -46,12 +50,15 @@
     <h2>What the app writes</h2>
     <p>With your permission, HIT writes the workouts from your export into Apple Health, along
       with their routes and heart rate where the files contain them. When it adds to a workout
-      another app recorded, it can also add cadence and power. It writes nothing anywhere else.</p>
+      another app recorded, it can also add cadence and power. If you choose to bring health data
+      across, it writes the health data from your export too — heart rate, sleep, steps, energy,
+      weight and the other kinds the export holds — each marked as coming from HIT. It writes
+      nothing anywhere else.</p>
 
     <h2>What leaves your device</h2>
     <p>Nothing. HIT's only network traffic is with Apple's App Store, to check whether the
       one-off unlock has been bought, to show its price, and to buy or restore it. Nothing about
-      your workouts is part of that. There is no server to send anything to,
+      your workouts or health is part of that. There is no server to send anything to,
       no account to sign in to, and no analytics or crash-reporting service of any kind.</p>
 
     <h2>What is stored on your device</h2>
@@ -59,10 +66,14 @@
       <li>A record of each import you have run: the date, the file name and the counts.</li>
       <li>An unfinished import, so it can be resumed.</li>
       <li>How many workouts have been written under the free allowance.</li>
+      <li>Which days of health data have been written under the free allowance: at most 100
+        dates, nothing else. These are kept in the iPhone's Keychain, which iOS keeps when the
+        app is deleted, so that deleting and reinstalling does not reset the allowance.</li>
       <li>A copy of the archive currently being imported, deleted when the run finishes.</li>
     </ul>
-    <p>All of it stays on the device and is removed when you delete the app. Deleting the app
-      does not remove workouts already written into Apple Health; those are yours, in Health,
+    <p>All of it stays on the device and is removed when you delete the app, except the dates in
+      the Keychain. Deleting the app does not remove workouts or health data already written into
+      Apple Health; those are yours, in Health,
       and are managed there.</p>
 
     <h2>Purchases</h2>
